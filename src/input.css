@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-scroll-blue {
+  background-color: #2f2f3b; /* Replace with your desired blue color */
+}
