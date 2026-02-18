@@ -14,7 +14,10 @@ export default [
       globals: {
         window: 'readonly',
         document: 'readonly',
-        console: 'readonly'
+        console: 'readonly',
+        localStorage: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly'
       }
     }
   },
@@ -24,7 +27,10 @@ export default [
       globals: {
         window: 'readonly',
         document: 'readonly',
-        console: 'readonly'
+        console: 'readonly',
+        localStorage: 'readonly',
+        setTimeout: 'readonly',
+        setInterval: 'readonly'
       }
     }
   },

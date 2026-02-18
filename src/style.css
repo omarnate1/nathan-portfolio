@@ -4,8 +4,30 @@
   --color-neon-green: #52ffa8;
   --color-scroll-blue: #0000FF;
   --shadow-neon-green: 0 0 20px 5px rgba(82, 255, 168, 0.8);
+  
+  --color-dark-bg: #0f0f0f;
+  --color-dark-card: #1f1f1f;
+  --color-dark-text: #d1d5db;
+  --color-dark-heading: #f9fafb;
+  
+  --color-light-bg: #f8f9fa;
+  --color-light-card: #ffffff;
+  --color-light-text: #374151;
+  --color-light-heading: #111827;
 }
 
 body {
-  @apply bg-black text-white;
+  @apply bg-dark-bg text-dark-text transition-colors duration-300;
+}
+
+html.dark body {
+  @apply bg-dark-bg text-dark-text;
+}
+
+html:not(.dark) body {
+  @apply bg-light-bg text-light-text;
+}
+
+html:not(.dark) .dark-bg-scroll-blue {
+  background-color: #f3f4f6;
 }

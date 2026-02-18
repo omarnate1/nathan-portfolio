@@ -1,27 +1,54 @@
 <script setup>
 import { useScrollHeader } from '../composables/useScrollHeader'
+import { useTheme } from '../composables/useTheme'
 import SocialLinks from './SocialLinks.vue'
-import { RouterLink } from 'vue-router'
+import ThemeToggle from './ThemeToggle.vue'
+import MobileMenu from './MobileMenu.vue'
 
 const { isScrolled } = useScrollHeader()
+const { isDark } = useTheme()
+
+const navItems = [
+  { name: 'Home', href: '#home' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Contact', href: '#contact' },
+]
 </script>
 
 <template>
   <header
     id="header"
     :class="[
-      'w-full pb-4 lg:pb-6 sticky top-0 z-50 transition-colors duration-300 lg:flex lg:justify-around lg:items-center',
-      isScrolled ? 'bg-scroll-blue' : 'bg-black'
+      'w-full pb-4 lg:pb-6 sticky top-0 z-50 transition-all duration-300',
+      isScrolled 
+        ? (isDark ? 'bg-dark-bg/95 backdrop-blur-sm shadow-lg' : 'bg-light-bg/95 backdrop-blur-sm shadow-md')
+        : 'bg-transparent'
     ]"
   >
-    <div class="font-extrabold text-3xl my-4 text-center">
-      <router-link to="/"><span>nathan-orobor</span></router-link>
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <div class="font-extrabold text-2xl lg:text-3xl">
+          <a href="#home"><span class="text-neon-green">nathan</span>-orobor</a>
+        </div>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a
+            v-for="item in navItems"
+            :key="item.name"
+            :href="item.href"
+            class="hover:text-neon-green transition-colors duration-200 text-sm font-medium"
+          >
+            {{ item.name }}
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <ThemeToggle />
+          <SocialLinks class="hidden lg:flex" />
+          <MobileMenu class="lg:hidden" />
+        </div>
+      </div>
     </div>
-    <nav class="flex gap-6 items-center">
-      <router-link to="/" class="hover:text-neon-green transition-colors">Home</router-link>
-      <router-link to="/projects" class="hover:text-neon-green transition-colors">Projects</router-link>
-      <router-link to="/contact" class="hover:text-neon-green transition-colors">Contact</router-link>
-    </nav>
-    <SocialLinks />
   </header>
 </template>
