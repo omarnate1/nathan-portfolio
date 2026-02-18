@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-green: #52ffa8;
+  --color-scroll-blue: #0000FF;
+  --shadow-neon-green: 0 0 20px 5px rgba(82, 255, 168, 0.8);
+}
+
+body {
+  @apply bg-black text-white;
+}
