@@ -1,29 +1,31 @@
 <script setup>
-import { useScrollHeader } from '../composables/useScrollHeader'
-import { useTheme } from '../composables/useTheme'
-import SocialLinks from './SocialLinks.vue'
-import ThemeToggle from './ThemeToggle.vue'
-import MobileMenu from './MobileMenu.vue'
+import { useScrollHeader } from "../composables/useScrollHeader";
+import { useTheme } from "../composables/useTheme";
+import SocialLinks from "./SocialLinks.vue";
+import ThemeToggle from "./ThemeToggle.vue";
+import MobileMenu from "./MobileMenu.vue";
 
-const { isScrolled } = useScrollHeader()
-const { isDark } = useTheme()
+const { isScrolled } = useScrollHeader();
+const { isDark } = useTheme();
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
-]
+  { name: "Home", href: "#home" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
 </script>
 
 <template>
   <header
     id="header"
     :class="[
-      'w-full pb-4 lg:pb-6 sticky top-0 z-50 transition-all duration-300',
-      isScrolled 
-        ? (isDark ? 'bg-dark-bg/95 backdrop-blur-sm shadow-lg' : 'bg-light-bg/95 backdrop-blur-sm shadow-md')
-        : 'bg-transparent'
+      'w-full pb-4 lg:p-6 sticky top-0 z-50 transition-all duration-300',
+      isScrolled
+        ? isDark
+          ? 'bg-dark-bg/95 backdrop-blur-sm shadow-lg'
+          : 'bg-light-bg/95 backdrop-blur-sm shadow-md'
+        : 'bg-transparent',
     ]"
   >
     <div class="container mx-auto px-4">

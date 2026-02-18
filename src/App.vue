@@ -33,8 +33,8 @@ onMounted(() => {
     
     <main>
       <HeroSection />
-      <SkillsSection />
       <ProjectsSection />
+      <SkillsSection />
       <ContactSection />
     </main>
     

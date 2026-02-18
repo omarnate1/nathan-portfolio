@@ -1,17 +1,19 @@
 <script setup>
-import { projects } from '../data/projects'
-import ProjectCard from './ProjectCard.vue'
+import { projects } from "../data/projects";
+import ProjectCard from "./ProjectCard.vue";
 
 const projectsWithTech = [
-  { ...projects[0], tech: ['Vue', 'Tailwind'] },
-  { ...projects[1], tech: ['HTML', 'CSS'] },
-  { ...projects[2], tech: ['JavaScript', 'CSS'] },
-  { ...projects[3], tech: ['JavaScript', 'HTML'] },
-  { ...projects[4], tech: ['HTML', 'CSS'] },
-  { ...projects[5], tech: ['React', 'CSS'] },
-  { ...projects[6], tech: ['React', 'CSS'] },
-  { ...projects[7], tech: ['HTML', 'CSS'] },
-]
+  { ...projects[0], tech: ["Vue", "Tailwind"] },
+  { ...projects[1], tech: ["Vue", "Tailwind"] },
+  { ...projects[2], tech: ["React", "CSS"] },
+  { ...projects[3], tech: ["HTML", "CSS"] },
+  { ...projects[4], tech: ["JavaScript", "CSS"] },
+  { ...projects[5], tech: ["JavaScript", "CSS"] },
+  { ...projects[6], tech: ["HTML", "CSS"] },
+  { ...projects[7], tech: ["React", "CSS"] },
+  { ...projects[8], tech: ["React", "CSS"] },
+  { ...projects[9], tech: ["HTML", "CSS"] },
+];
 </script>
 
 <template>

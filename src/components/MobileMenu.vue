@@ -38,7 +38,7 @@ const navItems = [
         v-if="isOpen"
         class="absolute top-full left-0 right-0 bg-gray-900 dark:bg-gray-900 bg-gray-100 shadow-lg py-4 px-4"
       >
-        <nav class="flex flex-col gap-4">
+        <nav class="flex flex-col items-center justify-center gap-4">
           <a
             v-for="item in navItems"
             :key="item.name"

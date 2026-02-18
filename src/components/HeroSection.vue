@@ -63,7 +63,6 @@ onMounted(() => {
           ]"
         >
           <div class="relative">
-            <div class="absolute inset-0 bg-neon-green/20 rounded-2xl blur-3xl"></div>
             <img
               src="/Nath ID (1).png"
               alt="Nathan Orobor"

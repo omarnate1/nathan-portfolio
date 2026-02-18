@@ -10,7 +10,7 @@
   --color-dark-text: #d1d5db;
   --color-dark-heading: #f9fafb;
   
-  --color-light-bg: #f8f9fa;
+  --color-light-bg: #e5e7eb;
   --color-light-card: #ffffff;
   --color-light-text: #374151;
   --color-light-heading: #111827;
@@ -25,7 +25,7 @@ html.dark body {
 }
 
 html:not(.dark) body {
-  @apply bg-light-bg text-light-text;
+  @apply bg-gray-200 text-light-text;
 }
 
 html:not(.dark) .dark-bg-scroll-blue {
