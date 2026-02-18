@@ -1,12 +1,24 @@
 <script setup>
+import { ref } from 'vue'
 import { useTheme } from '../composables/useTheme'
+import ContactForm from './ContactForm.vue'
 
 const { isDark } = useTheme()
+
+const showForm = ref(false)
 
 const phone = '+2348095793233'
 
 const openWhatsApp = () => {
   window.open(`https://wa.me/${phone}`, '_blank')
+}
+
+const openEmailForm = () => {
+  showForm.value = true
+}
+
+const closeEmailForm = () => {
+  showForm.value = false
 }
 
 const socials = [
@@ -43,17 +55,20 @@ const socials = [
               </p>
               
               <div class="space-y-4">
-                <div class="flex items-center gap-4">
+                <button
+                  @click="openEmailForm"
+                  class="flex items-center gap-4 w-full hover:bg-gray-700/30 p-2 rounded-lg transition-colors -ml-2"
+                >
                   <div class="w-12 h-12 rounded-full bg-neon-green/20 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-neon-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div>
+                  <div class="text-left">
                     <p class="text-sm text-gray-500">Email</p>
-                    <p class="font-medium">omarnate10@gmail.com</p>
+                    <p class="font-medium hover:text-neon-green transition-colors">omarnate10@gmail.com</p>
                   </div>
-                </div>
+                </button>
                 
                 <div class="flex items-center gap-4">
                   <div class="w-12 h-12 rounded-full bg-neon-green/20 flex items-center justify-center">
@@ -105,5 +120,7 @@ const socials = [
         </div>
       </div>
     </div>
+
+    <ContactForm :show="showForm" @close="closeEmailForm" />
   </section>
 </template>

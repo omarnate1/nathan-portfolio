@@ -6,14 +6,7 @@
   --shadow-neon-green: 0 0 20px 5px rgba(82, 255, 168, 0.8);
   
   --color-dark-bg: #0f0f0f;
-  --color-dark-card: #1f1f1f;
   --color-dark-text: #d1d5db;
-  --color-dark-heading: #f9fafb;
-  
-  --color-light-bg: #e5e7eb;
-  --color-light-card: #ffffff;
-  --color-light-text: #374151;
-  --color-light-heading: #111827;
 }
 
 body {
@@ -25,9 +18,5 @@ html.dark body {
 }
 
 html:not(.dark) body {
-  @apply bg-gray-200 text-light-text;
-}
-
-html:not(.dark) .dark-bg-scroll-blue {
-  background-color: #f3f4f6;
+  @apply bg-gray-200 text-gray-700;
 }
