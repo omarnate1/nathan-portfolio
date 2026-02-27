@@ -31,7 +31,7 @@ const navItems = [
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center">
         <div class="font-extrabold text-2xl lg:text-3xl">
-          <a href="#home"><span class="text-neon-green">nathan</span>-orobor</a>
+          <a href="#home"><span class="text-neon-green">Nathan</span>-Orobor</a>
         </div>
 
         <nav class="hidden lg:flex items-center gap-8">
