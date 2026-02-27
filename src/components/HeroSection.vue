@@ -52,7 +52,7 @@ onMounted(() => {
           <div class="flex flex-wrap gap-4">
             <a
               href="#projects"
-              class="px-6 py-3 bg-neon-green text-black font-semibold rounded-lg hover:shadow-neon-green transition-all duration-300 hover:scale-105"
+              class="px-6 py-3 bg-neon-green text-white font-semibold rounded-lg hover:shadow-neon-green transition-all duration-300 hover:scale-105"
             >
               View Projects
             </a>
