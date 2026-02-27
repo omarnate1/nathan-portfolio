@@ -23,7 +23,7 @@ onMounted(() => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8',
           ]"
         >
-          <p class="text-neon-green font-medium mb-4">Hello, I'm</p>
+          <p class="text-neon-green font-medium mb-4">Hello, I am</p>
 
           <h1 class="text-4xl lg:text-7xl font-bold mb-4 leading-tight">
             <span :class="isDark ? 'text-white' : 'text-gray-900'"
@@ -44,9 +44,9 @@ onMounted(() => {
             class="text-lg mb-8 max-w-lg"
             :class="isDark ? 'text-gray-400' : 'text-gray-600'"
           >
-            Based in Lagos, I build accessible, user-friendly web applications
-            with modern technologies. Passionate about creating elegant
-            solutions to complex problems.
+            Based in Lagos, I build accessible, user-friendly web and mobile
+            applications with modern technologies. Passionate about creating
+            elegant solutions to complex problems.
           </p>
 
           <div class="flex flex-wrap gap-4">
