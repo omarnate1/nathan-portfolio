@@ -17,6 +17,11 @@ html.dark body {
   @apply bg-dark-bg text-dark-text;
 }
 
+html:not(.dark) {
+  --color-neon-green: #0d9668;
+  --shadow-neon-green: 0 0 15px 3px rgba(13, 150, 104, 0.5);
+}
+
 html:not(.dark) body {
   @apply bg-gray-200 text-gray-700;
 }
